@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Unit 2: Ruby
 
 In this unit, you will go into more depth into Ruby and really start problem solving. You will have to create your own tests and determine what it means to be successful with a challenge. 
@@ -25,3 +26,7 @@ If you would like to open tabs in a new window, please either right click or hol
 + [Ruby Variable Scope](http://www.techotopia.com/index.php/Ruby_Variable_Scope) 
 + [GangesLearning (Videos)](https://www.youtube.com/user/GangesLearning)
 + [The Well-Grounded Rubyist (Book)](http://www.manning.com/black2/)  
+=======
+phase_0_unit_2
+==============
+>>>>>>> f9fbbb2cf6f6ac11ff5d0b19f33fc48d677ae0c7
