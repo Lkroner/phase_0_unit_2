@@ -5,7 +5,7 @@
 
 # 2. Pseudocode
 
-# Input:
+# Input: 
 # Output:
 # Steps:
 
