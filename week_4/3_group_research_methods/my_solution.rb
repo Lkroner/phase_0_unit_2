@@ -112,12 +112,52 @@ p my_hash_sorting_method(my_family_pets_ages) == [["Annabelle", 2], ["Ditto", 5]
 
 # Reflect!
 # 
-# What parts of your strategy worked? What problems did you face?
-# What questions did you have while coding? What resources did you find to help you answer them?
-# What concepts are you having trouble with, or did you just figure something out? If so, what?
-# Did you learn any new skills or tricks?
-# How confident are you with each of the Learning Competencies?
-# Which parts of the challenge did you enjoy?
-# Which parts of the challenge did you find tedious?
-# 
+# * What parts of your strategy worked? What problems did you face?
+# I was happy with the solutions I came up with for both methods. However, I wasn't able to use the exact same method, anlthough
+# they are related. I hope this still counts!
+
+# * What questions did you have while coding? What resources did you find to help you answer them?
+# My questions: - Is there already a method that would sort things alphabetically?
+#               - Is there a method that will combine arrays?
+# These are the two things that I knew I would need to do to come up with a solution.
+
+# * What concepts are you having trouble with, or did you just figure something out? If so, what?
+# I'm still a bit uncertain of this testing thing. I was very unsure what to do with the driver code, looking up the "p" kernel
+# helped, and I just ran this through IRB to test if I was getting the right outcome. Not sure if I should have done something
+# else to test!
+
+# * Did you learn any new skills or tricks?
+# I think I finally figured out how to use IRB!! I was very confused by this as first as I was having issues entering multi-line
+# of code and how to exit IRB. I learned these two tricks and now I am happily speeding along with IRB :) Hooray!:
+# 	1. ; --> Use a semicolon instead of line breaks when entering multi-line code into IRB. 
+# 			(Ex: RUBY:
+# 				 def my_array_sorting_method(array)
+#     				your code
+#     				return your output
+# 				 end
+
+# 				 IRB:
+# 				 def my_array_sorting_method(array); your code; return your output; end)
+# 	2. ctl + D --> To exit IRB and get back to your normal command line use ctl + D.
+
+# * How confident are you with each of the Learning Competencies?
+# 1. I feel pretty confident in being able to find a Ruby method to help with certain functions. They're so many to learn! I 
+# am very curious to see what methods other chose to use, if only so I can learn how to use some more. You can't use it if 
+# you don't know if it exists!
+# 2. I feel fairly confident in my ability to iterate through data structures. Testing very helpful because you can see what 
+# output you're getting and what the method your using is really doing vs what you thought it would do. It's helped me "get" 
+# methods quicker.
+# 3. Explaing how and why to use methods is difficult but good because it tests if you know what you're talking about.
+
+# * Which parts of the challenge did you enjoy?
+# I enjoyed finding the flatten method. I have used sort before, but flatten was a new one. And useful!
+
+# * Which parts of the challenge did you find tedious?
+# Having to go back and explain all of my code was a bit tedious, although helpful.
+
+# * What did you learn about researching and explaining your research to others?
+# I learned it's hard! I tried to think how I like to see examples of how methods work and that usually makes a huge difference
+# in how quickly I'm able to understand the idea. So I tried to include examples and explain why I choose the methods that I did.
+# Hopefully that makes it a bit more clear. 
+#
 # 
