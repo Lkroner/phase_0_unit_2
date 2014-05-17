@@ -26,18 +26,12 @@
 # 3. Initial Solution
 
 def essay_writer(title, topic, date, thesis, pronoun)
-    if pronoun == female
-       puts "#{title}
-    	     #{topic} was born in #{date}. She changed the world and is someone we should all learn about further. 
-    	     #{thesis}. #{topic} is important to the world."
-    if pronoun == male
-       puts "#{title}
-    	     #{topic} was born in #{date}. He changed the world and is someone we should all learn about further. 
-    	     #{thesis}. #{topic} is important to the world."
-    else 
-       puts "#{title}
-    	     #{topic} was important since #{date}. It changed the world and is something we should all learn about further. 
-    	     #{thesis}. #{topic} is important to the world."
+    # if pronoun == "female"
+    #    return "#{title}. #{topic} was born in #{date}. She changed the world and is someone we should all learn about further. #{thesis}. #{topic} is important to the world."
+    # if pronoun == "male"
+    #    return "#{title}. #{topic} was born in #{date}. He changed the world and is someone we should all learn about further. #{thesis}. #{topic} is important to the world."
+    # else 
+    #    return "#{title}. #{topic} was important since #{date}. It changed the world and is something we should all learn about further. #{thesis}. #{topic} is important to the world."
 end
 
 
