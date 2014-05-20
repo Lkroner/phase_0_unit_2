@@ -29,7 +29,8 @@
 # 2. Initial Solution
 
 def get_grade(array)
-	average = array.inject{ |x, a| x + a}.to_f / array.length
+	average = (array.inject{ |x, a| x + a}.to_f)
+	average/array.length
 	if average >= 90 
         puts "A"
     elsif average >= 80 
@@ -45,6 +46,12 @@ end
 
 
 # 3. Refactored Solution
+
+p get_grade([100,90,100,99,99])
+p get_grade([80,90,80,89,98])
+p get_grade([70,80,70,79])
+p get_grade([60,67,70,63])
+p get_grade([50,40,0,99,9])
 
 # None
 
