@@ -31,7 +31,7 @@ class Die
 
   def initialize(sides)
     @sides = sides 
-	    unless sides > 1
+	    if sides < 1
 	    raise ArgumentError.new("Must use number more than 1")
 	  end
   end
