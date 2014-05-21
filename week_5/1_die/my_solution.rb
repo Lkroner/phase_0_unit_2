@@ -1,17 +1,17 @@
 # U2.W5: Die Class 1: Numeric
 
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge by myself.
 
 # 2. Pseudocode
 
-# Input: Number of sides of the die
+# Input: 
+# Number of sides of the die
 # Output:
-# sides output = 
-# roll output = a number 1 through the number of sides
-
+# sides output = number of die sides
+# roll output = a number 1 through the number of die sides
+#
 # Steps:
-
 # define class Die
 #  give it three methods
 #        1. use attribute accessor method to be able to read/write sides input
@@ -19,9 +19,10 @@
 #      			create instance variable sides that stores the sides parameter.
 #               unless the sides parameter is less than 1
 #					then puts "Side number must an integer be more than 0."
-
+#
 #        3. define method roll
-
+#           add one to the rand method that takes the parameter # of sides
+# close all
 
 # 3. Initial Solution
 
