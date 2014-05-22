@@ -26,30 +26,38 @@
 
 # 3. Initial Solution
 
-class Die
-  attr_accessor :sides	
+# class Die
+#   attr_accessor :sides	
 
-  def initialize(sides)
-    @sides = sides 
-	    if sides < 1
-	    raise ArgumentError.new("Must use number more than 1")
-	  end
-  end
+#   def initialize(sides)
+#     @sides = sides 
+# 	    if sides < 1
+# 	    raise ArgumentError.new("Must use number more than 1")
+# 	  end
+#   end
   
-  def roll
-	1 + rand(sides)
-  end
+#   def roll
+# 	1 + rand(sides)
+#   end
 
-end
+# end
 
 
 
 # 4. Refactored Solution
 
-# 
-#   
-#   
-#  
+ class Die
+  attr_accessor :sides	
+
+  def initialize(sides)
+    @sides = sides 
+	    raise ArgumentError.new("Must use number more than 1") if sides < 1
+  end
+  
+  def roll
+	1 + rand(sides)
+  end
+end 
 
 
 # 1. DRIVER TESTS GO BELOW THIS LINE

@@ -1,6 +1,6 @@
 # U2.W5: A Nested Array to Model a Boggle Board
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge by myself.
 
 boggle_board = [["b", "r", "a", "e"],
                 ["i", "o", "d", "t"],
@@ -14,12 +14,18 @@ boggle_board = [["b", "r", "a", "e"],
 
 # Initial Solution
 
+  def create_word(board, *coords)
+    coords.map { |coord| board[coord.first][coord.last]}.join("")
+  end
+
 
 # Refactored Solution
 
 
 # DRIVER TESTS GO BELOW THIS LINE
 
+p create_word(boggle_board, [2,1], [1,1], [1,2], [0,3])
+p create_word(boggle_board, [0,1], [0,2], [1,2])
 
 # Reflection 
 

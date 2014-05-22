@@ -86,7 +86,7 @@ class GuessingGame
   end
 
   def solved?
-	return @guess == answer
+	  @guess == answer
   end 
 
 end

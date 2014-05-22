@@ -29,30 +29,41 @@
 
 # 3. Initial Solution
 
-class Die
-  attr_accessor :labels
+# class Die
+#   attr_accessor :labels
 
-  def initialize(labels)
-  	    @labels = labels
-  		raise ArgumentError if labels.empty? 
-  end
+#   def initialize(labels)
+#   	  @labels = labels
+#   		raise ArgumentError if labels.empty? 
+#   end
 
-  def sides
-  	return labels.length
-  end
+#   def sides
+#   	return labels.length
+#   end
     
-  def roll
-  	return labels[rand(sides)]
-  end
-end
+#   def roll
+#   	return labels[rand(sides)]
+#   end
+# end
 
 
 
 # 4. Refactored Solution
 
+class Die
+  attr_accessor :labels
 
-
-
+  def initialize(labels)
+      @labels = labels
+      raise ArgumentError if labels.empty? 
+  end
+  def sides
+    labels.length
+  end 
+  def roll
+     labels[rand(sides)]
+  end
+end
 
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
