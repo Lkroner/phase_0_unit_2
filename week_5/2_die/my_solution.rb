@@ -54,14 +54,14 @@ class Die
   attr_accessor :labels
 
   def initialize(labels)
-      @labels = labels
+    @labels = labels
       raise ArgumentError if labels.empty? 
   end
   def sides
     labels.length
   end 
   def roll
-     labels[rand(sides)]
+    labels[rand(sides)]
   end
 end
 

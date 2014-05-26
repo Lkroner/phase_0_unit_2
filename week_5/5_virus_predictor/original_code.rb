@@ -1,6 +1,6 @@
 # U2.W5: Virus Predictor
 
-# I worked on this challenge Patrick
+# I worked on this challenge with Patrick Reynolds.
 
 # EXPLANATION OF require_relative
 #
@@ -31,9 +31,11 @@ class VirusPredictor
     end
   end
 
-  private  #what is this?  what happens if it were cut and pasted above the virus_effects method
+  private  #what is this?  What happens if it were cut and pasted above the virus_effects method?
     # Private is a scope manager. It limits the scaope of the methods listed below to only other methods within VirusPredictor. 
     # So private is like the gate of the methods contained in it, and virus_effects is like the gatekeeper that gives access to them.
+    # If you put private above the virus_effects then you couldn't call virus_effects outside of the method and this whole
+    # method would be pretty useless. 
   def predicted_deaths(population_density, population, state)
     if population_density >= 200 # predicted_deaths passes in the population density and population and uses a ratio to determine the number effected by the virus
       number_of_deaths = (population * 0.4).floor
@@ -67,7 +69,7 @@ class VirusPredictor
       speed += 2.5
     end
 
-    puts " and will spread across the state in #{speed} months.\n\n"
+    puts " and will spread across the state in #{speed} months."
 
   end
   
@@ -84,8 +86,6 @@ alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_densit
 alabama.virus_report
 alabama.virus_effects
 
-
-
 jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population], STATE_DATA["New Jersey"][:region], STATE_DATA["New Jersey"][:regional_spread]) 
 jersey.virus_effects
 
@@ -94,3 +94,37 @@ california.virus_effects
 
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population], STATE_DATA["Alaska"][:region], STATE_DATA["Alaska"][:regional_spread]) 
 alaska.virus_effects
+
+
+# Reflection 
+
+# * What parts of your strategy worked? What problems did you face?
+# Our strategy worked for the most part. The one thing that shook us up a bit was.
+# 
+# 
+# * What questions did you have while coding? What resources did you find to help you answer them?
+# As mentioned above, fhad to decide which method to use to create my new array of indexed elements
+# of the old arrays.
+# 
+# * What concepts are you having trouble with, or did you just figure something out? If so, what?
+# Didn't have much problem with this challenge.
+# 
+# * Did you learn any new skills or tricks?
+# I learned about private vs public methods and since Patrick had a lot of knowlegde on this topic he
+# was able to explain this to me in further depth which was really helpful for my understanding. I discuss
+# it in detail above.
+# 
+# * How confident are you with each of the Learning Competencies?
+# Identify and explain what code is doing(85%)
+# Create, access, and traverse nested data structures(75%)
+# Automate repetitive tasks using loops(75%)
+# Define a method's responsiblity(80%)
+# Identify and rewrite repetitive code(70%)
+# Explain private and discuss when it would be used(85%)
+# 
+# * Which parts of the challenge did you enjoy?
+# Working with Patrick was fun, he's got a great CS knowledge base so it was good to learn more about the code
+# from that perspective.
+# 
+# * Which parts of the challenge did you find tedious?
+# None.
