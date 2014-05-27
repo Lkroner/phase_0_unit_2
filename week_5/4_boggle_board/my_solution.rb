@@ -76,6 +76,7 @@ p get_row(1, boggle_board) #=>  ["i", "o", "d", "t"]
 # Doing another reflection after this... BORING READ ALERT: Might be pretty similar.
 # 
 
+<<<<<<< HEAD
 #-------------------------------------------------------------------------------
 
 # Part 2: Now write a method that takes a column number and returns all the elements in the column.
@@ -133,3 +134,5 @@ p get_col(1, boggle_board)  #=>  ["r", "o", "c", "a"]
 # 
 # * Which parts of the challenge did you find tedious?
 # Yeah double reflections.
+=======
+>>>>>>> upstream/master
