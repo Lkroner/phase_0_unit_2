@@ -127,7 +127,7 @@ assert { removed_fork.clean_silverware == true }
 # 5. Reflection 
 
 # * What parts of your strategy worked? What problems did you face?
-# 
+# My strategy worked here. Problems where with syntax and which methods to use where.
 
 # * What questions did you have while coding? What resources did you find to help you answer them?
 # Lots of questions here: What's pop? (http://rubydoc.info/stdlib/core/1.9.3/Array:pop)
