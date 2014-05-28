@@ -127,6 +127,9 @@ assert { boggle_board.create_word([3,2]) == "k"}
 # Nothing I had to use resources for. Just finding a way to implement my existing code into the 
 # BoggleBoard class.
 #
+# Oh! I did have to remind myself with method to use to join an array into a string. The answer was
+# in the question!(http://stackoverflow.com/questions/3500814/ruby-array-to-string-conversion)
+#
 # * What concepts are you having trouble with, or did you just figure something out? If so, what?
 # Liked I discussed above.
 #
