@@ -68,6 +68,14 @@ class Silverware
 		puts "It is clean!"
 	end
 
+	def clean
+	  if @clean
+		puts "The #{type} is clean."
+	  else
+		puts "The #{type} is dirty."
+	  end
+		@clean
+	end
 end
 
 knife1 = Silverware.new("knife")
@@ -99,27 +107,31 @@ silverware_drawer.view_contents #What should this return? Should return nothing.
 fork = Silverware.new("fork")
 silverware_drawer.add_item(fork) 
 silverware_drawer.view_contents
-removed_fork = silverware_drawer.remove_item(fork) #add some puts statements to help you trace through the code...
-removed_fork.eat
-removed_fork.clean_silverware
+silverware_drawer.remove_item(fork) #add some puts statements to help you trace through the code...
+fork.eat
+fork.clean_silverware
 
 silverware_drawer.view_contents
  
 
 #BONUS SECTION
 
-# puts fork.clean
+puts fork.clean
 
 # DRIVER TESTS GO BELOW THIS LINE
 
 
 def assert
-  raise "Assertion failed!" unless yield
+  if yield		
+  	puts "true"
+  else	
+    raise "Assertion failed!" 
+	end
 end
 
-assert { silverware_drawer.view_contents == "Nothing! HAHA!" }
+# assert { silverware_drawer.view_contents == "Nothing! HAHA!" }
 assert { fork.eat == false }
-# assert { fork == "fork"}
+assert { fork == "fork" }
 assert { removed_fork.clean_silverware == true }
 
 
