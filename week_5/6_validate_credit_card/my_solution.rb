@@ -75,14 +75,10 @@ end
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
  
-card_one = CreditCard.new(1234567891234567)
-p card_one.check_card
-
-card_two = CreditCard.new(4563960122001999)
-p card_two.check_card
-
-card_three = card_two = CreditCard.new(456396012200199)
-p card_three.check_card
+card_1 = CreditCard.new(1111111111111111)
+card_1.check_card == false
+card_2 = CreditCard.new(4408041234567893)
+card_2.check_card == true
 
 
 # 5. Reflection 
