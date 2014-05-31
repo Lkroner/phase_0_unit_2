@@ -1,249 +1,137 @@
 # U2.W6: Refactoring for Code Readability
 
 
-# I worked on this challenge with: Albert
-
-# U2.W6: Create a Car Class from User Stories
+# I worked on this challenge with Puru Dahal.
 
 
-# I worked on this challenge by myself and with: Albert
+# Original Solution
 
-# 1. User Stories
+# class CreditCard
+  
+#   def initialize(num)
+#     num_digits = num.to_s.split("").length #
+#     raise ArgumentError.new("Please enter exactly 16 digits for the credit card number.") if num_digits != 16
+#     #raise ArgumentError.new("Please enter exactly 16 digits for the credit card number.") if num.to_s.length != 16
+#     @num = num
+#   end
+  
+#   def check_card 
+#     arr = @num.to_s.split("") #
+#     multiplied = []
+#     i = 0 
+#     while i < arr.length
+#       if i % 2 == 0 # He has selected wrong numbers to multiply by 2. This could be solved by
+#         # reversing and then i.odd?. 
+#         ans = (arr[i].to_i * 2)
+#           if ans > 9
+#             #ans = ans.to_s.split('') #split num to an array of strings
+#             #ans = ans.map(&:to_i) #interate through the array, and convert them to integer
+#             #ans = ans.inject(:+) # add those numbers within in the array
+            
+#             tens = ans / 10 # 1.5
+#             ones = ans % 10 # 5
+#             ans = tens + ones
+#           end
+#       else
+#         ans = arr[i].to_i
+#       end
+#       multiplied << ans
+#       i += 1
+#     end
+#     sum = multiplied.reduce(:+) #inject(:+)
 
-# * As a video game player, I want to be able to create a new car and set it's model and color so I 
-# can customize it in the video game.
-# * As a video game player, I need to be able to define a distance to drive so I can follow directions 
-# appropriately.
-# * As a video game player, I'd like to be able to see the speed I am traveling, so I can properly 
-# accelerate or decelerate.
-# * As a video game player, I want to be able to turn left or right so I can navigate a city and follow 
-# directions.
-# * As a video game player, I want to be able to accelerate and decelerate the car to a defined speed 
-# so I can drive following the rules of the road.
-# * As a video game player, I want to keep track of the total distance I have travelled, so I can get 
-# paid for mileage.
-# * As a video game player, I want to be able to stop the car so I can follow traffic signs and signals.
-# * As a video game player, I would like to see output reflecting the latest action of my car so I can 
-# see a play-by-play of the pizza delivery.
-# 
-# What are the characteristics associated with the car? These are your attributes. What are the actions 
-# associated with your car? These are your methods.
+# #     sum % 10 == 0 
+#     if sum % 10 == 0 
+#       return true
+#     else
+#      return false
+#     end
+#   end
 
-# 2. Pseudocode
-
-#  create class Car 
-
-#  	define initialize method that takes 3 parameters: car_model, car_color, distance, speed
-#  		initialize the parameters
-#  	close
- 	
-#  	define move(miles)
-#  	  @distance += miles
-#  	  writes "Your #{car_color}#{car_model} traveled #{miles} at #{@speed}mph's."
-#  	close
- 	
-#  	define left
-#  	 writes "You're going left!"
-#  	close
- 	
-#  	define right
-#  	 writes "You're going right!"
-#  	close
-
-#  	define set_speed method(new_speed)
-#  	  @speed = (new_speed)
-#  	close
-
-# 	define distance_traveled method
-# 	  @distance
-#  	close
-
-# 	define stop_car method
-# 	  @speed = 0
-#  	close
-
-# close 	
+# end
 
 
-# 3. Initial Solution
- 
- # class Car 
+# Refactored Solution
 
- # 	  def initialize( car_color, car_model )
- # 	    @car_color = car_color
- # 	    @car_model = car_model
- # 	    @distance = 0
- # 	    @speed = 0
- # 	  end
- 	
- # 	def move(miles)
- # 	  @distance += miles
- # 	    puts "You traveled #{miles} at #{@speed}mph's in your #{@car_model}."
- # 	  end
- 	
- # 	  def left
- # 	    if @speed <= 0
- # 	      puts "You have to be moving!"
- # 	    else
- # 	      puts "You're going left!"
- # 	    end
- # 	  end
- 	
- # 	  def right
- # 	    if @speed <= 0
- # 	      puts "You have to be moving!"
- # 	    else
- # 	      puts "You're going right!"
- # 	    end
- # 	  end
-
- # 	  def set_speed(new_speed)
- # 	    @speed = new_speed
- # 	  end
- 	  
- # 	  def current_speed
- # 	    @speed
- # 	  end
-
-	#   def distance_traveled 
-	#     @distance
- #  	  end
-
-	#   def stop_car 
-	#     @speed = 0
- # 	  end
-
- #  end 
-
-
-
-
-# 4. Refactored Solution
-
-
-  class Car 
-
- 	  def initialize( car_color, car_model )
- 	    @car_color = car_color
- 	    @car_model = car_model
- 	    @distance = 0
- 	    @speed = 0
- 	    p "That's one cool #{@car_color} #{@car_model}!"
- 	  end
- 	
- 	def move(miles)
- 	  @distance += miles
- 	    "You traveled #{miles} miles at #{@speed} mph's in your sweet #{@car_model}."
- 	  end
- 	
- 	  def left
- 	    if @speed <= 0
- 	      "You have to be moving! Hurry or the pizza will get cold."
- 	    else
- 	      "You're going left!"
- 	    end
- 	  end
- 	
- 	  def right
- 	    if @speed <= 0
- 	      "You have to be moving!"
- 	    else
- 	      "You're going right!"
- 	    end
- 	  end
-
- 	  def set_speed(new_speed)
- 	    @speed = new_speed
- 	    "Your new speed is #{new_speed}."
- 	  end
- 	  
- 	  def current_speed
- 	    @speed
- 	    "Your current is #{@speed}."
- 	  end
-
-	  def distance_traveled 
-	    @distance
-	    "You've traveled #{@distance} miles."
-  	  end
-
-	  def stop 
-	    @speed = 0
-	    "Nice stop. No California rolls here."
- 	  end
-
+class CreditCard
+  
+  def initialize(num)
+     raise ArgumentError.new("Please enter exactly 16 digits for the credit card number.") if num.to_s.length != 16
+     @num = num
   end
 
+  def check_card 
+    arr = @num.to_s.split("").reverse #
+    luhn_array = []
+    arr.each_with_index do|num, i|
+      if i.odd?
+        ans = num.to_i * 2
+        if ans > 9
+           luhn_array << ans.to_s.split('').map(&:to_i).inject(:+) #split num to an array of strings
+        else
+         luhn_array << ans
+        end
+      else
+       luhn_array << num.to_i
+      end     
+    end
+    luhn_array.inject(:+) % 10 == 0
+  end
+end
 
-# 1. DRIVER TESTS GO BELOW THIS LINE
 
-p "== BEGIN PIZZA DELIVERY =="
+# DRIVER TESTS GO BELOW THIS LINE
 
-p "Dude what's your ride?"
-miata = Car.new("red", "Miata")
+def assert
+  raise "Invalid Credit Card" unless yield
+end
 
-# Ok let's get going! Here are your instructions:
+card_1 = CreditCard.new(4563960122001999)
+assert{card_1.check_card == true}
 
-# * Create a new car of your desired model and type
-# * Drive .25 miles (speed limit is 25 mph)
-# * At the stop sign, turn right
-# * Drive 1.5 miles (speed limit is 35 mph)
-# * At the school zone, check your speed
-# * Slow down to speed limit 15 mph
-# * Drive .25 miles more miles
-# * At the stop sign, turn left
-# * Drive 1.4 miles (speed limit is 35 mph)
-# * Stop at your destination
-# * Log your total distance travelled.
+card_2 = CreditCard.new(4563960122001991)
+assert{card_2.check_card == false}
 
-p miata.set_speed(25) 
-p miata.move(0.25)
-p miata.stop
-p miata.right
-p miata.set_speed(35)
-p miata.right
-p miata.move(1.5)
-p "School Zone! Check your speed! Speed limit is 15 mph."
-p miata.current_speed
-p miata.set_speed(15)
-p miata.move(0.25)
-p miata.stop
-p miata.left
-p miata.set_speed(35)
-p miata.left
-p miata.move(1.4)
-p "You made it! How many miles did you travel?"
-p miata.distance_traveled
-p "Pizza delivery SUCCESS!"
+card_3 = CreditCard.new(456396012201)
+assert{card_3.check_card}
 
-p "== END PIZZA DELIVERY =="
+# card_1 = CreditCard.new(4563960122001999)
+# card_2 = CreditCard.new(4563960122001991)
+# card_3 = CreditCard.new(456396012201)
+# p card_1.check_card == true
+# p card_2.check_card == false
+# p card_3p card_2.check_card == false.check_card 
 
 # 5. Reflection 
 
+
 # * What parts of your strategy worked? What problems did you face?
-# Our strategy worked pretty well once we figured out what were attributes and methods. 
-# Make the driver tests definitely helped with this process. Everything else fell into
-# place once we had an action plan. This was a fun assignment actually!
-
+# Our strategy worked pretty well! The only error we had was where we forgot to convert num on line 75 back
+# into an integer(converted it to a string line 64) so we could perform an implicit inject method on it.
+# Otherwise went smoothly.
+# 
 # * What questions did you have while coding? What resources did you find to help you answer them?
-# Didn't need any resources on this one.
-
+# No serious questions that we couldn't answer ourselves.
+# 
 # * What concepts are you having trouble with, or did you just figure something out? If so, what?
-# Didn't struggle with anything serious here.
-
+# Doing alright with refactoring.
+#
 # * Did you learn any new skills or tricks?
-# I learned that having a question mark at the end of a method name returns a boolean. I knew this
-# used elsewhere in Ruby code but I thought that was a cool/tricky way to make it return true/false
-# without having to use comparing operators.
-
+# I learned about Nirtious.io! It's like Stypi except it has a console you can run irb or ruby commands
+# through to check your code.
+# 
 # * How confident are you with each of the Learning Competencies?
-# Identify the attributes and methods of a class based on user stories(80% - This was good practice!)
-# Translate a user story into driver code and solutions(85% - Yup!)
-# Explain how data structures and classes can model real-world objects(85% - Feeling better about this one as well.)
-
+# Explain what code is doing (85%)
+# Refactor for clarity and readability(85%)
+#
 # * Which parts of the challenge did you enjoy?
-# All of it! Albert and I made a good team and jammed through this one. Lots of fun.
-
+# This exercise was not my favorite but was really good practice and I had fun workng with Puru. I think we 
+# ended up with code that makes more semantic sense and is concise as well.
+# 
 # * Which parts of the challenge did you find tedious?
-# Not even the pseudocode was THAT hard to deal with this time around.  
+# Didn't have anything tedious here.
+
+
+
+
 
